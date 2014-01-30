@@ -212,3 +212,7 @@ th, td {
 
   border: 1px solid #c7c0ae;
 }
+
+.space-none {
+	margin-bottom: 0;
+}
