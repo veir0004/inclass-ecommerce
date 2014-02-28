@@ -3,6 +3,7 @@
 
 .list-group {
 	list-style-type: none;
+	font-weight:300;
 }
 
 .list-group-item {
