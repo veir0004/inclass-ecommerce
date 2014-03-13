@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Dinos 'R Us</title>
+<title>{{page.title}} · Dinos 'R Us</title>
 	<meta name="handheldfriendly" content="true">
 	 <meta name="mobileoptimized" content="240">
 	 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -18,9 +18,12 @@
 	<link href="{{site.baseurl}}/css/header.css" rel="stylesheet">
 	<link href="{{site.baseurl}}/css/footer.css" rel="stylesheet">
 	<link href="{{site.baseurl}}/css/product.css" rel="stylesheet">
+	<link href="{{site.baseurl}}/css/promos.css" rel="stylesheet">
 	<link href="{{site.baseurl}}/css/product-list-item.css" rel="stylesheet">
 </head>
 <body>
+
+{{page.url}}
 
 <header class="masthead island push-0">
   <div class="grid grid-bottom">
@@ -30,18 +33,24 @@
     <nav class="unit unit-s-1 unit-m-1 unit-l-2-3">
       <ul class="list-group giga brand-family push-0 nav">
         <li class="list-group-item list-group-item-inline">
-          <a href="{{site.baseurl}}/">Home</a>
+          <a class="{% if page.url == '/' %}current{% endif %}" href="{{site.baseurl}}/">Home</a>
         </li>
         <li class="list-group-item list-group-item-inline">
-          <a href="{{site.baseurl}}/dinosaurs/"/>Dinosaurs</a>
+          <a class="{% if page.url contains '/dinosaurs/' %}current{% endif %}"href="{{site.baseurl}}/dinosaurs/"/>Dinosaurs</a>
         </li>
         <li class="list-group-item list-group-item-inline">
-          <a href="{{site.baseurl}}/about/">About</a>
+          <a class="{% if page.url == '/about/' %}current{% endif %}"href="{{site.baseurl}}/about/">About</a>
         </li>
       </ul>
     </nav>
   </div>
 </header>
+
+{% if.page.showbanner %}	
+<div class="banner">
+	<h2>{{page.bannertext}}</h2>
+</div>
+{% endif %}
 
 	{{content}}
 
