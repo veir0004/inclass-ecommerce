@@ -8,16 +8,6 @@ showbanner: yes
 	<h1>Dinos 'R Us</h1>
 	<p>Lorem ispsum dolor sit amet, consectetuer asipsjdfh elit. Ajjfdjsb djdfn</p>
 	
-	<div class="grid">
-		<div class= "gutter unit unit-s-1 unit-m-1-3 unit-l-1-3">
-		{% include promo-small.html title="Promo 1" desc="fantastic" image="air-dinos/pteranodon.jpg"%}
-		</div>
-		<div class= "gutter unit unit-s-1 unit-m-1-3 unit-l-1-3">
-		{% include promo-small.html title="Promo 2" desc="Super-Duper" image="land-dinos/diplodocus.jpg"%}
-		</div>
-		<div class= "gutter unit unit-s-1 unit-m-1-3 unit-l-1-3">
-		{% include promo-small.html title="Promo 2" desc="Amaze-Balls" image="land-dinos/stegosaurus.jpg" %}
-		</div>
-	</div>
-		
+	{% include promo-large.html %}	
+	{% include promo-small.html %}	
 
